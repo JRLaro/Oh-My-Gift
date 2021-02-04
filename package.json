@@ -20,5 +20,8 @@
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "sequelize": "^5.8.6"
+  },
+  "devDependencies": {
+    "eslint-plugin-prettier": "^3.3.1"
   }
 }
