@@ -2,3 +2,8 @@ form.signup,
 form.login {
   margin-top: 50px;
 }
+
+body {
+  background-image: url("/Assets/OMG-01.png");
+  
+}
