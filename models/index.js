@@ -14,6 +14,16 @@ if (config.use_env_variable) {
   var sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
 
+const { Op } = require("sequelize");
+Post.findAll({
+  where: {
+    ProductName: {
+      [Op.eq]: 'Allegiance Economy Dual-scale Digital Thermometer'
+    }
+  }
+});
+// SELECT * FROM post WHERE ProductName = Allegiance Economy Dual-scale Digital Thermometer
+
 fs
   .readdirSync(__dirname)
   .filter(function(file) {
