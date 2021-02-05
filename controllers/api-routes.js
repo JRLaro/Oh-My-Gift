@@ -4,30 +4,6 @@ let passport = require("../config/passport");
 
 
 module.exports = function (app) {
-  //Api test route
-  app.get("/apiTest", function (req, res) {
-    const request = require('request');
-
-    const options = {
-      method: 'GET',
-      url: 'https://target1.p.rapidapi.com/auto-complete',
-      qs: { q: 'macbook air' },
-      headers: {
-        'x-rapidapi-key': '060fa7bd32mshd4d14b256c582fbp173924jsn92ccfae51f8e',
-        'x-rapidapi-host': 'target1.p.rapidapi.com',
-        useQueryString: true
-      }
-    };
-
-    request(options, function (error, response, body) {
-      if (error) throw new Error(error);
-
-      res.json(console.log("Body", body));
-      res.json(console.log("Response", response));
-    });
-  });
-
-
 
   // Using the passport.authenticate middleware with our local strategy.
   // If the user has valid login credentials, send them to the members page.
