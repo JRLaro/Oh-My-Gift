@@ -1,5 +1,5 @@
 {
-  "name": "1-Passport-Example",
+  "name": "passportexample",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -11,9 +11,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "eslint": "^4.19.1"
-  },
   "dependencies": {
     "bcryptjs": "2.4.3",
     "eslint-config-prettier": "^7.2.0",
@@ -26,6 +23,7 @@
     "sequelize": "^5.8.6"
   },
   "devDependencies": {
-    "eslint-plugin-prettier": "^3.3.1"
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint": "^4.19.1"
   }
 }
