@@ -1,0 +1,40 @@
+{
+    "parserOptions": {
+      "ecmaVersion": 2017
+    },
+    "env": {
+      "es6": true,
+      "browser": true,
+      "commonjs": true,
+      "node": true
+    },
+    "extends": "prettier",
+    "plugins": ["prettier"],
+    "rules": {
+      "array-callback-return": "warn",
+      "camelcase": "warn",
+      "curly": "warn",
+      "dot-notation": "warn",
+      "eqeqeq": "warn",
+      "implicit-arrow-linebreak": ["warn", "beside"],
+      "indent": ["warn", 2],
+      "no-duplicate-case": "warn",
+      "no-else-return": "warn",
+      "no-empty": "warn",
+      "no-empty-function": "warn",
+      "no-extra-semi": "warn",
+      "no-func-assign": "warn",
+      "no-irregular-whitespace": "warn",
+      "no-multi-spaces": "warn",
+      "no-unreachable": "warn",
+      "no-unused-vars": "warn",
+      "no-var": "warn",
+      "prefer-arrow-callback": "warn",
+      "prefer-const": "warn",
+      "prettier/prettier": "warn",
+      "quotes": ["warn", "double"],
+      "semi": ["warn", "always"],
+      "vars-on-top": "warn",
+      "yoda": "warn"
+    }
+  }
