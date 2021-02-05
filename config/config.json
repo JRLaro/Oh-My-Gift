@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "rootroot",
-    "database": "passport_demo",
+    "database": "omg_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
