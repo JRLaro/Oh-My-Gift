@@ -1,9 +1,50 @@
-form.signup,
-form.login {
-  margin-top: 50px;
+#contain{
+  margin-top: 25px;
 }
 
-body {
-  background-image: url("/Assets/OMG-01.png");
-  
+.jumbotron {
+  padding: 0.5em 0.6em;
+}
+
+h2{
+  font-size: 50px;
+  text-align: center;
+}
+
+#a {
+  text-decoration: none;
+  color:inherit
+}
+
+#btn {
+  font-size: 25px; 
+  height: 50%; 
+  width: 100%;
+}
+
+img{
+  position: center center;
+}
+
+#img1 {
+  animation: omgBox 4s;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  display: block 
+}
+
+@keyframes omgBox {
+  0% {
+      transform: translate3d(0px, -150px, 0px);
+      opacity: 5%;
+  }
+  50% {
+      transform: translate3d(0px, 50px, 0px);
+      opacity: 100%;
+  }
+  100% {
+      transform: translate3d(0px, 0px, 0px);
+      opacity: 100%;
+  }
 }
