@@ -1,27 +1,55 @@
 'use strict';
 
-module.exports = function(sequelize, DataTypes){
+var sequelize = new Sequelize('omg_db', 'root', 'rootroot', {
+    host: "localhost", //your server
+    port: 8080, //server port
+    dialect: 'mysql'
+  });
+
+module.exports = function ( DataTypes) {
     let omg_db = sequelize.define('omg_db', {
-        UniqId: DataTypes.STRING,
-        CrawlTimestamp: DataTypes.STRING,
-        ProductUrl: DataTypes.STRING,
-        ProductName: DataTypes.STRING,
-        Description: DataTypes.STRING,
-        ListPrice: DataTypes.STRING,
-        SalePrice: DataTypes.STRING,
-        ItemNumber: DataTypes.STRING,
-        Gtin: DataTypes.STRING,
-        PackageSize: DataTypes.STRING,
-        Category: DataTypes.STRING,
-        PostalCode: DataTypes.STRING,
-        Available: DataTypes.STRING,
+        UniqId: {
+            type: DataTypes.STRING,
+        },
+        CrawlTimestamp: {
+            type: DataTypes.STRING,
+        },
+        ProductUrl: {
+            type: DataTypes.STRING,
+        },
+        ProductName: {
+            type: DataTypes.STRING,
+        },
+        Description: {
+            type: DataTypes.STRING,
+        },
+        ListPrice: {
+            type: DataTypes.STRING,
+        },
+        SalePrice: {
+            type: DataTypes.STRING,
+        },
+        ItemNumber: {
+            type: DataTypes.STRING,
+        },
+        Gtin: {
+            type: DataTypes.STRING,
+        },
+        PackageSize: {
+            type: DataTypes.STRING,
+        },
+        Category: {
+            type: DataTypes.STRING,
+        },
+        PostalCode: {
+            type: DataTypes.STRING,
+        },
+        Available: {
+            type: DataTypes.STRING,
+        },
 
     }, {
-        classMethods: {
-            associate: function(models){
-
-            }
-        }
+        tableName: 'marketing_sample_for_walmart_com_product_details'
     });
     return omg_db;
 }

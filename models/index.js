@@ -16,7 +16,6 @@ if (config.use_env_variable) {
 
 
 
-// SELECT * FROM post WHERE ProductName = Allegiance Economy Dual-scale Digital Thermometer
 
 // fs
 //   .readdirSync(__dirname)
