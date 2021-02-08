@@ -15,11 +15,10 @@ module.exports = function (app) {
     //   //   products: data
     //   // });
     // })
-
     db.Omg.findAll({
       where: {
         Category: {
-          [Op.like]: 'Health%',
+          [Op.like]: `${req}%`,
         },
         SalePrice: {
           [Op.between]: [20, 200],
