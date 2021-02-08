@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  console.log('login.js loaded')
+  console.log('login.js loaded');
   // Getting references to our form and inputs
   let loginForm = $("form.login");
   let emailInput = $("input#email-input");

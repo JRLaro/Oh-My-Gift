@@ -7,17 +7,16 @@ module.exports = function (app) {
 
   //retriving sequelize model test
   app.get("/api/omgTest", function (req, res) {
-    if (!req.omg_db) {
-      // The user is not logged in, send back an empty object
-      res.json({});
-    } else {
-      // Otherwise send back the user's email and id
-      // Sending back a password, even a hashed password, isn't a good idea
-      res.json({
-        ProductUrl: req.omg_db.ProductUrl,
-        ProductName: req.omg_db.ProductName
-      });
-    }
+
+    // Otherwise send back the user's email and id
+    // Sending back a password, even a hashed password, isn't a good idea
+    db.Omg.findAll({}).then(function(data){
+      console.log(data);
+      res.json(data);
+      // res.render('members', {
+      //   products: data
+      // });
+    })
   });
 
   // Using the passport.authenticate middleware with our local strategy.
