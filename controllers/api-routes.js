@@ -1,23 +1,35 @@
 // Requiring our models and passport as we've configured it
 let db = require("../models");
 let passport = require("../config/passport");
-
+const { Op } = require("sequelize");
 
 module.exports = function (app) {
 
   //retriving sequelize model test
   app.get("/api/omgTest", function (req, res) {
-    if (!req.omg_db) {
-      // The user is not logged in, send back an empty object
-      res.json({});
-    } else {
-      // Otherwise send back the user's email and id
-      // Sending back a password, even a hashed password, isn't a good idea
-      res.json({
-        ProductUrl: req.omg_db.ProductUrl,
-        ProductName: req.omg_db.ProductName
-      });
-    }
+
+    // db.Omg.findAll({}).then(function(data){
+    //   console.log(data);
+    //   res.json(data);
+    //   // res.render('members', {
+    //   //   products: data
+    //   // });
+    // })
+
+    db.Omg.findAll({
+      where: {
+        Category: {
+          [Op.like]: 'Health%',
+        },
+        SalePrice: {
+          [Op.between]: [20, 200],
+        }
+      }
+    }).then(function (data) {
+      console.log(data);
+      res.json(data);
+    })
+
   });
 
   // Using the passport.authenticate middleware with our local strategy.
