@@ -29,4 +29,11 @@ module.exports = function(app) {
     res.render("members");
   });
 
+  app.get("/category" , function(req, res) {
+    res.render("category");
+  });
+
+  app.get("/price" , function(req, res) {
+    res.render("price");
+  });
 };
