@@ -10,13 +10,13 @@ module.exports = function (app) {
 
     // Otherwise send back the user's email and id
     // Sending back a password, even a hashed password, isn't a good idea
-    const omg_db = db.omg_db.findAll();
-    res.json({
-       ProductUrl: "Apples",
-       ProductName: "omg_db",
-     
-    });
-
+    db.Omg.findAll({}).then(function(data){
+      console.log(data);
+      res.json(data);
+      // res.render('members', {
+      //   products: data
+      // });
+    })
   });
 
   // Using the passport.authenticate middleware with our local strategy.

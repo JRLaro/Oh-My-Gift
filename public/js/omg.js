@@ -4,8 +4,6 @@ $(document).ready(function() {
 
     $.get("/api/omgTest").then(function(data) {
         console.log(data);
-        $(".product-name").text(data.ProductName);
-        console.log(response.ProductName);
-        console.log(data.ProductName);
+        //$(".product-name").text(data);
       });
  });

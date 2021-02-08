@@ -1,16 +1,8 @@
 'use strict';
 
-var sequelize = new Sequelize('omg_db', 'root', 'rootroot', {
-    host: "localhost", //your server
-    port: 8080, //server port
-    dialect: 'mysql'
-  });
 
-module.exports = function ( DataTypes) {
-    let omg_db = sequelize.define('omg_db', {
-        UniqId: {
-            type: DataTypes.STRING,
-        },
+module.exports = function (sequelize, DataTypes) {
+    let Omg = sequelize.define('Omg', {
         CrawlTimestamp: {
             type: DataTypes.STRING,
         },
@@ -48,8 +40,7 @@ module.exports = function ( DataTypes) {
             type: DataTypes.STRING,
         },
 
-    }, {
-        tableName: 'marketing_sample_for_walmart_com_product_details'
     });
-    return omg_db;
+        
+    return Omg;
 }

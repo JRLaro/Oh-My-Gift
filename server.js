@@ -30,6 +30,7 @@ require("./controllers/html-routes.js")(app);
 require("./controllers/api-routes.js")(app);
 
 // Syncing our database and logging a message to the user upon success
+//When you wanna droptable use this object in sync{ force: true }
 db.sequelize.sync().then(function () {
   app.listen(PORT, function () {
     console.log(
