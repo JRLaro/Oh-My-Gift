@@ -13,7 +13,6 @@ $(document).ready(function () {
     console.log(fired_button);
   });
 
-  console.log('price.js loaded');
   let anyBtnSuccess = $(".price");
 
   anyBtnSuccess.on("click", function (e) {
