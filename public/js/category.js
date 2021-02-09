@@ -19,8 +19,10 @@ $(document).ready(function () {
     anyBtnSuccess.on("click", function (e) {
       e.preventDefault();
       console.log("Clickeed");
-      price1 = 20;
-      price2 = 200;
+      //js to splice id from seleced btn
+      string = this.id;
+      price1 = string.split("-")[0];
+      price2 = string.split("-")[1];
       fired_button = localStorage.getItem('Category');
       console.log(fired_button);
       queryTest(fired_button, price1, price2);
