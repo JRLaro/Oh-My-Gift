@@ -10,6 +10,11 @@ $(document).ready(function () {
     queryTest(fired_button);
   });
 
+  let clearLocalStorage= $(".clear"); 
+  clearLocalStorage.on("click", function () {
+    window.localStorage.clear();
+  })
+  
   //need to fix this
   function queryTest(category) {
     $.get("/api/omgTest", {
