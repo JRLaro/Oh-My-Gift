@@ -28,7 +28,10 @@ $(document).ready(function () {
       queryTest(fired_button, price1, price2);
     });
   
-
+    let clearLocalStorage= $(".clear"); 
+    clearLocalStorage.on("click", function () {
+      window.localStorage.clear();
+    })
   
     function queryTest(category, price1, price2) {
       console.log(category);
