@@ -6,9 +6,12 @@
   padding: 0.5em 0.6em;
 }
 
-h2{
+h1{
   font-size: 50px;
   text-align: center;
+  font-family: 'Pacifico', cursive;
+  text-shadow: rgb(0, 0, 0);
+  
 }
 
 #a {
