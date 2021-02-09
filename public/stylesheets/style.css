@@ -13,6 +13,10 @@ h1{
   text-shadow: rgb(0, 0, 0);
   
 }
+p{
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 25px; 
+}
 
 /* Originally #a, changed to class */
 .link {
