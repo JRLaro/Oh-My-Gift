@@ -33,6 +33,8 @@ $(document).ready(function () {
     window.localStorage.clear();
   })
 
+  //add on click for login.handlebars
+
   function queryTest(category, price1, price2) {
     console.log(category);
     $.get("/api/omgTest/" + category + "/" + price1 + "/" + price2, {}).then(function (data) {
