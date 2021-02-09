@@ -36,4 +36,8 @@ module.exports = function(app) {
   app.get("/price" , function(req, res) {
     res.render("price");
   });
+
+  app.get("/output" , function(req, res) {
+    res.render("output");
+  });
 };
