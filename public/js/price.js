@@ -1,23 +1,24 @@
 $(document).ready(function () {
-    console.log('login.js loaded');
-    let anyBtn = $(".btn-success");
-  
-    anyBtn.on("click", function (e) {
-      e.preventDefault();
-      console.log("Clickeed");
-      var fired_button = this.id;
-      console.log(fired_button);
-      queryTest(fired_button);
-    });
-  
-    //need to fix this
-    function queryTest(category) {
-      $.get("/api/omgTest", {
-        Category: category
-  
-      }).then(function (data) {
-        console.log(data, "Query test");
-  
-      })
-    }
-  }); 
+  console.log('price.js loaded');
+  let anyBtnSuccess = $(".price");
+
+  anyBtnSuccess.on("click", function (e) {
+    e.preventDefault();
+    console.log("Clickeed");
+    price1 = 20;
+    price2 = 200;
+    
+    console.log(fired_button);
+    queryTest(fired_button, price1, price2);
+  });
+
+
+
+  function queryTest(category, price1, price2) {
+    console.log(category);
+    $.get("/api/omgTest/"+category+"/"+price1+"/"+price2, {}).then(function (data) {
+      console.log(data, "Query test");
+
+    })
+  }
+}); 
