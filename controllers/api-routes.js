@@ -6,7 +6,7 @@ const { Op } = require("sequelize");
 module.exports = function (app) {
 
   //retriving sequelize model test
-  app.get("/api/omgTest", function (req, res) {
+  app.get("/api/omgTest/:cat", function (req, res) {
 
     // db.Omg.findAll({}).then(function(data){
     //   console.log(data);
@@ -15,11 +15,10 @@ module.exports = function (app) {
     //   //   products: data
     //   // });
     // })
-
     db.Omg.findAll({
       where: {
         Category: {
-          [Op.like]: 'Health%',
+          [Op.like]: req.params.cat+'%',
         },
         SalePrice: {
           [Op.between]: [20, 200],

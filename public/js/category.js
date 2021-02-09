@@ -12,10 +12,8 @@ $(document).ready(function () {
   
     //need to fix this
     function queryTest(category) {
-      $.get("/api/omgTest", {
-        Category: category
-  
-      }).then(function (data) {
+      console.log(category);
+      $.get("/api/omgTest/"+category, {}).then(function (data) {
         console.log(data, "Query test");
   
       })
