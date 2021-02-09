@@ -6,8 +6,10 @@ const { Op } = require("sequelize");
 module.exports = function (app) {
 
   //retriving sequelize model test
-  app.get("/api/omgTest/:cat", function (req, res) {
-
+  app.get("/api/omgTest/:cat/:price1/:price2", function (req, res) {
+    console.log(req.params.price1);
+    console.log(req.params.cat);
+    console.log(req.params.price2);
     // db.Omg.findAll({}).then(function(data){
     //   console.log(data);
     //   res.json(data);
@@ -21,7 +23,7 @@ module.exports = function (app) {
           [Op.like]: req.params.cat+'%',
         },
         SalePrice: {
-          [Op.between]: [20, 200],
+          [Op.between]: [req.params.price1, req.params.price2],
         }
       }
     }).then(function (data) {
