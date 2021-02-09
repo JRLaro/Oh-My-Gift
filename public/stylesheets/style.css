@@ -21,6 +21,9 @@ p{
   font-family: 'Josefin Sans', sans-serif;
   font-size: 25px;
 }
+a:hover {
+  color: white;
+}
 
 #btn {
   font-size: 25px; 
