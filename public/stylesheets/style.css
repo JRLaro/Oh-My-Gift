@@ -14,7 +14,8 @@ h1{
   
 }
 
-#a {
+/* Originally #a, changed to class */
+.link {
   text-decoration: none;
   color:inherit
 }
@@ -23,7 +24,19 @@ h1{
   font-size: 25px; 
   height: 50%; 
   width: 100%;
+  font-family: 'Josefin Sans', sans-serif;
 }
+
+#a {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 20px;
+}
+
+#categoryBtns {
+  font-family: 'Josefin Sans', sans-serif; 
+  font-size: 20px;
+}
+
 #redirectBtn {
   margin-top: 20px;
 }
