@@ -17,7 +17,9 @@ h1{
 /* Originally #a, changed to class */
 .link {
   text-decoration: none;
-  color:inherit
+  color:inherit;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 25px;
 }
 
 #btn {
@@ -27,18 +29,14 @@ h1{
   font-family: 'Josefin Sans', sans-serif;
 }
 
-#a {
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 20px;
-}
-
 #categoryBtns {
   font-family: 'Josefin Sans', sans-serif; 
   font-size: 20px;
 }
 
 #redirectBtn {
-  margin-top: 20px;
+  font-family: 'Josefin Sans', sans-serif; 
+  font-size: 15px; 
 }
 
 img{
