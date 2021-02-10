@@ -33,12 +33,29 @@ $(document).ready(function () {
   })
 
   //add on click for login.handlebars
+  let anyBtnPerson = $(".person");
+
+  anyBtnPerson.on("click", function (e) {
+    e.preventDefault();
+    console.log("Clickeed");
+    fired_button = this.id;
+    localStorage.setItem('Person', fired_button);
+    console.log(fired_button);
+
+  });
 
   function queryTest(category, price1, price2) {
     console.log(category);
     $.get("/api/omgTest/" + category + "/" + price1 + "/" + price2, {}).then(function (data) {
-      console.log(data, "Query test");
-
+      console.log(data[0].ProductUrl, "Query test");
+      localStorage.setItem('Data', {
+        ProductUrl: data[0].ProductUrl,
+      });
+    }).then((data) => {
     })
+
   }
-}); 
+
+
+
+});

@@ -1,5 +1,6 @@
 // Requiring path to so we can use relative routes to our HTML files
 const path = require("path");
+var data = require("./api-routes");
 
 // Requiring our custom middleware for checking if a user is logged in
 let isAuthenticated = require("../config/middleware/isAuthenticated");
@@ -37,7 +38,10 @@ module.exports = function(app) {
     res.render("price");
   });
 
-  app.get("/output" , function(req, res) {
-    res.render("output");
-  });
+  // app.get("/output/:data" , function(req, res) {
+  //   var data = req.params.data;
+  //   res.render("output", {
+  //     ProductUrl: Category
+  //   });
+  // });
 };
