@@ -1,4 +1,4 @@
-<div class="jumbotron jumbotron-fluid bg-warning">
+<div class="jumbotron jumbotron-fluid bg-info text-white">
   <div class="container">
     <br>
     <h1 class="display-4 text-center">Oh-My-Gift</h1>
@@ -10,12 +10,10 @@
 {{!-- Item output goes here --}}
  <div class="card">
   <div class="card-header text-center">
-    Your Gift for ${whoever they selected}
+    <p> Your Gift for ${whoever they selected}</p>
   </div>
   
-
-<div class="row">
-  <div class="card">
+  <div class="card text">
   <div class="col">
     <div id="omgUrl" class="row"> Product Url</div>
     <div id="omgName" class="row"> Product Name</div>
@@ -59,9 +57,12 @@
 </div>
 </div> 
 
-
-<button style="margin-top: 30px;" class="btn btn-warning btn-block clear"><a style="color: white;" href="/">Return to
+<div id="redirectBtn" class="row justify-content-center">
+   <div class="col-3">
+     <button style="margin-top: 30px; margin-bottom: 30px;" class="btn btn-warning btn-block clear"><a style="color: white;" href="/">Return to
             Main Menu</a></button>
+    </div>
+    </div>        
 </div>
  <script src="js/category.js"></script>
     
