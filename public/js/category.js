@@ -44,6 +44,16 @@ $(document).ready(function () {
 
   });
 
+  var personBtn = $(".person");
+  personBtn.on("click", function (e) {
+    e.preventDefault();
+    console.log("Clicked");
+    fired_button = this.id;
+    localStorage.setItem('Person', fired_button);
+    console.log(fired_button);
+    $("#person").text("Your Gift for " + fired_button);
+  });
+
   function queryTest(category, price1, price2) {
     console.log(category);
     $.get("/api/omgTest/" + category + "/" + price1 + "/" + price2, {}).then(function (data) {
