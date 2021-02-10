@@ -39,6 +39,14 @@ module.exports = function (sequelize, DataTypes) {
         Available: {
             type: DataTypes.STRING,
         },
+        createdAt: {
+            type: DataTypes.DATE,
+            defaultValue: sequelize.literal('NOW()')
+          },
+          updatedAt: {
+            type: DataTypes.DATE,
+            defaultValue: sequelize.literal('NOW()')
+          }
     });
         
     return Omg;
