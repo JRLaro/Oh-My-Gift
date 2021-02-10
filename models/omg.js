@@ -39,7 +39,6 @@ module.exports = function (sequelize, DataTypes) {
         Available: {
             type: DataTypes.STRING,
         },
-
     });
         
     return Omg;
