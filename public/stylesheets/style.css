@@ -32,6 +32,12 @@ a:hover {
   font-family: 'Josefin Sans', sans-serif;
 }
 
+.btn:hover {
+  -ms-transform: scale(1); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5);
+}
+
 #categoryBtns {
   font-family: 'Josefin Sans', sans-serif; 
   font-size: 20px;
