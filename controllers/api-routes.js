@@ -2,21 +2,13 @@
 let db = require("../models");
 let passport = require("../config/passport");
 const { Op } = require("sequelize");
+var dataQuery;
 
 module.exports = function (app) {
 
   //retriving sequelize model test
   app.get("/api/omgTest/:cat/:price1/:price2", function (req, res) {
-    console.log(req.params.price1);
-    console.log(req.params.cat);
-    console.log(req.params.price2);
-    // db.Omg.findAll({}).then(function(data){
-    //   console.log(data);
-    //   res.json(data);
-    //   // res.render('members', {
-    //   //   products: data
-    //   // });
-    // })
+
     db.Omg.findAll({
       where: {
         Category: {
@@ -27,12 +19,23 @@ module.exports = function (app) {
         }
       }
     }).then(function (data) {
-      console.log(data);
-      res.json(data);
+      dataQuery = data;
+      res.json(data)
+      
     })
 
   });
 
+  app.get('/output', function(req, res){
+    for(var i =0; i < 1; i++){
+    res.render('output', {
+      ProductUrl: dataQuery[i].ProductUrl,
+      ProductName: dataQuery[i].ProductName,
+      Description: dataQuery[i].Description,
+      SalePrice: dataQuery[i].SalePrice
+     })
+  }
+  })
   // Using the passport.authenticate middleware with our local strategy.
   // If the user has valid login credentials, send them to the members page.
   // Otherwise the user will be sent an error

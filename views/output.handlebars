@@ -1,3 +1,5 @@
+
+
 <div class="jumbotron jumbotron-fluid bg-info text-white">
   <div class="container">
     <br>
@@ -10,49 +12,18 @@
 {{!-- Item output goes here --}}
  <div class="card">
   <div class="card-header text-center">
-    <p> Your Gift for ${whoever they selected}</p>
+    <p id="person" > Your Gift for </p>
   </div>
   
   <div class="card text">
-  <div class="col">
-    <div id="omgUrl" class="row"> <p> Product Url </p></div>
-    <div id="omgName" class="row"> <p> Product Name </p></div>
-    <div id="omgDescript" class="row"> <p> Product Description </p></div>
-    <div id="omgPrice" class="row"> <p> Product Price </p></div>
+  <div class="col"> 
+    <div id="omgName" class="row"> <p> {{ ProductName }} </p></div>
+    <div id="omgPrice" class="row"> <p>$ {{ SalePrice }} </p></div>
+    <div id="omgDescript" class="row"> <p> {{ Description }} </p></div>
+    <div id="omgUrl" class="row"> <p> <a target="_blank" href="{{ ProductUrl }}">{{ ProductUrl }}</a> </p></div>
   </div>
   </div>
-  <div class="card">
-  <div class="col">
-    <div id="omgUrl" class="row"> <p> Product Url </p></div>
-    <div id="omgName" class="row"> <p> Product Name </p></div>
-    <div id="omgDescript" class="row"> <p> Product Description </p></div>
-    <div id="omgPrice" class="row"> <p> Product Price </p></div>
-  </div>
-  </div>
-  <div class="card">
-  <div class="col">
-    <div id="omgUrl" class="row"> <p> Product Url </p></div>
-    <div id="omgName" class="row"> <p> Product Name </p></div>
-    <div id="omgDescript" class="row"> <p> Product Description </p></div>
-    <div id="omgPrice" class="row"> <p> Product Price </p></div>
-  </div>
-  </div>
-  <div class="card">
-  <div class="col">
-    <div id="omgUrl" class="row"> <p> Product Url </p></div>
-    <div id="omgName" class="row"> <p> Product Name </p></div>
-    <div id="omgDescript" class="row"> <p> Product Description </p></div>
-    <div id="omgPrice" class="row"> <p> Product Price </p></div>
-  </div>
-  </div>
-  <div class="card">
-  <div class="col">
-    <div id="omgUrl" class="row"> <p> Product Url </p></div>
-    <div id="omgName" class="row"> <p> Product Name </p></div>
-    <div id="omgDescript" class="row"> <p> Product Description </p></div>
-    <div id="omgPrice" class="row"> <p> Product Price </p></div>
-  </div>
-  </div>
+  
   
 </div>
 </div> 
@@ -64,5 +35,6 @@
     </div>
     </div>        
 </div>
- <script src="js/category.js"></script>
+<script src="js/category.js"></script>
+ 
     
